@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+ height: 200vh;  
+ width: 100%; 
+background: linear-gradient(rgb(27, 27, 27)40%,rgb(192, 157, 157));
+}
+.heading h1{
+    font-size: 50px;
+    position: absolute;
+    top: 5%;
+   left: 32%;
+
+    
+    /* White Text */
+    color: white;
+    
+    /* Multi-color Shadow */
+    text-shadow: 
+      2px 2px 0px red,      /* Red shadow */
+      -2px -2px 0px orange, /* Orange shadow */
+      2px -2px 0px yellow,  /* Yellow shadow */
+      -2px 2px 0px green,   /* Green shadow */
+      4px 4px 10px blue;    /* Blue outer glow */
+}
+
+.project1{
+   
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    height: 14rem;
+    border-radius: .5rem;
+    transition: .5s ease;
+    
+}
+.p1{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+}
+.p2{
+    position: absolute;
+    top: 20%;
+    left: 30rem;
+}
+.p3{
+    position: absolute;
+    top: 20%;
+    left: 57rem;
+}
+.p4{
+    position: absolute;
+    top: 24rem;
+    left: 3%;
+}
+.p5{
+    position: absolute;
+    top: 24rem;
+    left: 30rem;
+}
+.p6{
+    position: absolute;
+    top: 24rem;
+    left: 57rem;
+}
+.p7{
+    position: absolute;
+    top: 40rem;
+    left: 3%;
+}
+.p8{
+    position: absolute;
+    top: 40rem;
+    left: 30rem;
+}
+.p9{
+    position: absolute;
+    top: 40rem;
+    left: 57rem;
+}
+.p10{
+    position: absolute;
+    top: 56rem;
+    left: 3%;
+}
+.p11{
+    position: absolute;
+    top: 56rem;
+    left: 30rem;
+}
+.p12{
+    position: absolute;
+    top: 56rem;
+    left: 57rem;
+}
+
+
+
+
+
+.project1 video {
+    width: 100%; /* Video ki width ko parent div ki width ke barabar rakha */
+    height: 100%; /* Video ki height ko parent div ki height ke barabar rakha */
+    object-fit: cover; /* Video ko cover karne ke liye */
+}
+.project1:hover{
+    transform: scale(1.1);
+
+}
+
+/* ***********foter */
+
+footer {
+ width: 100%;
+position: absolute;
+top: 72rem;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 2px;
+background-color: #080808; /* Dark gray background */
+color: white; /* White text color */
+padding: 20px; /* Padding around the footer */
+text-align: center; /* Center align text */
+  }
+  
+  .footer-content h3 {
+    font-size: 2.10rem; /* Larger heading size */
+    font-weight: 600; /* Bold heading */
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .footer-content p {
+    font-size: 1.575rem; /* Slightly smaller text */
+    margin: 5px 0; /* Space between paragraphs */
+  }
+  
+  .footer-note {
+    font-size: 0.55rem; /* Small text for the copyright notice */
+    color: #718096; /* Lighter gray color */
+    margin-top: 20px; /* Space above the copyright text */
+  }
+  
+  span{color: rgb(240, 226, 29);
+font-weight: 600;
+font-size: 30px;}
+
+button{
+    background-color: #f0e0e0;
+    color: #000;
+   height: 60px;
+   width: 140px;
+   border-radius: 10px;
+   font-weight: 600;
+   font-size: 25px;
+margin-left: 160px;
+ 
+}
+button:hover{
+    background-color: #718096;
+
+
+}

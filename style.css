@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+:root{
+    --bg-color:#081b29;
+    --main-color :#00abf0;
+    --text-color:#333;
+    --second-text-color:#555;
+    --white-color:#fff;
+    --cover-color:linear-gradient(45deg,#00abf0 ,#006e9a);
+    --page-color :linear-gradient(90deg,#fff ,#ddd);
+    --border:.125rem solid #00abf0 ;
+    --box-shadow : 0 0 .6rem rgba(0,0,0,.2);
+
+}  
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cover-color);
+    color: var(--text-color);
+   
+}
+
+.maindiv{
+    position: relative;
+    width: 66rem;
+    height: 38rem;
+    padding: 2rem;
+    perspective:250rem ;
+    animation: show-animate 2s forwards;
+    overflow: hidden;
+   
+
+
+
+}
+@keyframes show-animate {
+    0%,30%{
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+}
+.cover{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,1),rgb(52, 127, 224));
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    transform-origin: right;
+    box-shadow: 0px 10px 20px rgb(77, 47, 47);
+}
+
+.cover.cover-left {
+    z-index:  -1;
+}
+
+.cover.cover-right{
+   
+    z-index: 100;
+    transition:transform 2s cubic-bezier(.645, .045,.355,.1) ;
+}
+
+.cover.cover-right h1 {
+    font-size: 40px;
+    position: relative;
+    top: 20%;
+    left: 33%;
+    
+    /* White Text */
+    color: white;
+    
+    /* Multi-color Shadow */
+    text-shadow: 
+      2px 2px 0px red,      /* Red shadow */
+      -2px -2px 0px orange, /* Orange shadow */
+      2px -2px 0px yellow,  /* Yellow shadow */
+      -2px 2px 0px green,   /* Green shadow */
+      4px 4px 10px blue;    /* Blue outer glow */
+}
+
+
+
+#coverpicture{
+    height: 300px;
+    width: 300px;
+    background-image: url(—Pngtree—cute\ cartoon\ girl\ doing\ office_15313078.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 25%;
+    left: 18%;
+}
+.cover.cover-right.turn{
+    transform: rotateY(180deg);
+
+}
+
+
+.book{
+    position: relative;
+    width:100% ;
+    height: 100%;
+    display: flex;
+    perspective:250rem ;
+
+}
+
+.book-page {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--page-color);
+    box-shadow: 0 0 .6rem rgba(0,0,0,.1);
+    display: flex;
+   
+
+}
+
+.book-page .page-left{
+    box-shadow: .6rem .6rem .6rem rgba(0,0,0,.1);
+}
+
+.porfolio-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.mypic{
+
+    height: 200px;
+    width: 200px;
+    background-image: url(profile-pic.jfif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: solid rgb(10, 74, 158) 3px;
+}
+
+.porfolio-page h1{
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+.porfolio-page h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.social-media{
+  
+    margin: .6rem 0 .8rem;
+}
+.social-media a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 2.5rem;
+height: 2.5rem;
+background: transparent;
+border-radius: 50%;
+border: var(--border);
+font-size: 1.3rem;
+color: var(--main-color);
+margin: 0.2rem;
+transition: .5s;
+
+}
+
+.porfolio-page .social-media a:hover{
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.porfolio-page p{
+    text-align: justify;
+
+
+
+}
+
+.btn{
+   display: inline-flex; 
+   justify-content: center;
+   align-items: center;
+   width: 9.5rem;
+   height: 3rem;
+   background: var(--main-color);
+   border:rgb(25, 111, 161) solid ;
+   border-radius: .3rem;
+   font-size: 1rem;
+   color: var(--white-color);
+   font-weight: 700;
+   margin: 0 1rem;
+   transition: .5s;
+  
+}
+
+.btn:hover{
+    background: transparent;
+color: var(--main-color);
+border:var(--border) ;
+}
+
+.porfolio-page  .btn-box{
+   
+    margin-top:1.2rem ;
+}
+
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover{
+background: var(--main-color);
+color: var(--white-color);
+}
+
+.book-page.page-right{
+    position: absolute;
+    right: 0%;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition:transform 1s cubic-bezier(.645, .045,.355,.1) ;
+
+
+
+}
+
+.book-page.page-right.turn{
+    transform: rotateY(-180deg);
+
+}
+.book-page .page-front,
+.book-page .page-back{
+    position: absolute;
+    top:0%;
+    left :0;
+    width:100% ;
+    height: 100%;
+    background: var(--page-color);
+    padding: 1.5rem 2rem;
+}
+
+.book-page .page-front{
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+.book-page .page-back{
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+
+.title{
+    text-align: center;
+    margin-bottom:1rem ;
+}
+.journey-content .year {
+    color: var(--main-color);
+    font-weight: 600;
+ 
+}
+
+.journey-content .year i{
+    margin-right: .4rem;
+}
+
+.journeyeduc-box{
+    
+    border-left: var(--border);
+}
+
+.journeyeduc-box .journey-content{
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 1.3rem;
+
+}
+.titlede{
+    font-size:25px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 50px;
+}
+.journeyeduc-box .journey-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.65rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+
+
+}
+
+.numer-page{
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 700;
+
+}
+
+.nextprev-btn{
+    position: absolute;
+    bottom:.9rem ;
+    right: 1.5rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    color:var(--second-text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+}
+.nextprev-btn:hover{
+    color: var(--main-color);
+}
+.nextprev-btn.back{
+left: 2rem;
+
+}
+
+.instiude{
+    margin-top: 20px;
+    background: white;
+    color: #006e9a;
+
+}
+
+.schoolpic{
+    height: 200px;
+    width: 200px;
+    background-image: url(https://pngimg.com/uploads/book/book_PNG51090.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20%;
+    margin-left: 40px;
+}
+
+.journeypera{
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: ridge 8px var(--main-color);
+    padding: 8px;
+    padding-left: 20px;
+}
+
+.journeypera:hover{
+    background: rgb(135, 208, 236);
+   box-shadow: var(--box-shadow);
+    
+}
+
+.page-front h1{
+ 
+  margin-left:140px ;
+}
+
+.content{
+  
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+.content span{
+ display: flex;  
+ align-items: center;
+ text-align: center;
+display: inline-block;
+height: 115px;
+width: 110px;
+margin-top: 10px;
+color: rgb(49, 100, 167);
+padding-top: 3%;
+margin-left: 10px;
+border : solid 3px var(--main-color);
+font-weight: 700;
+
+
+}
+.content span:hover{
+    background: var(--main-color);
+    border : solid 3px rgb(49, 100, 167);
+    color: var(--white-color);
+}
+
+.content span i{
+    font-size: 70px;
+
+}
+
+.portfolio-box .imag-box video{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+border: var(--border);
+border-radius: .5rem;
+transition: .5s ease;
+overflow: hidden;
+}
+
+.titlev{
+    margin-bottom: 30px;
+   position: relative;
+   right: 10%;
+}
+
+.portfolio-box .imag-box:hover video{
+
+    transform: scale(1.1);
+}
+
+.portfolio-box .info-box{
+margin: 2rem 0 1.5rem;
+}
+
+.portfolio-box .info-box .info-title{
+font-size: 20px;
+margin-bottom: 1rem;
+display: flex;
+justify-content:center ;
+align-items: center;
+color: rgb(24, 84, 133);
+
+}
+
+
+.portfolio-box .btn-box{
+ margin-top: 30px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.contact-box{
+    text-align: center;
+}
+.contact-box .field{
+    width: 100%;
+    background: transparent;
+    border: var(--border);
+    border-radius: .3rem;
+    padding: .8rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+
+}
+
+.contact-box .field::placeholder{
+    color: var(--text-color);
+}
+
+.contact-box textarea{
+    resize: none;
+    height: 10rem;
+}
+.contact-box .btn{
+    cursor: pointer;
+}
+
+.back-profile{
+    position: absolute;
+    bottom: 1.2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: .3rem;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+}
+.back-profile:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.back-profile p{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%) scale(.5);
+    font-size: 1rem;
+    opacity: 0;
+    transition: .5s;
+    color: var(--main-color);
+
+
+
+}
+
+.back-profile:hover p{
+    opacity: 1;
+    transform: translate(-50%) ;
+    top: -1.8rem;
+}
+
+.hobypera{
+    margin-top: 10px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.codingpic{
+    width: 100%;
+    height: 100px;
+    background-image: url(—Pngtree—colorful\ code\ word\ art\ geometric_5110461.png);
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
+   
+}
